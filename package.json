@@ -1,5 +1,5 @@
 {
-  "name": "REPOSITORY_NAME",
+  "name": "fullstackjs-testing-practice",
   "version": "1.0.0",
   "description": "REPOSITORY_DESCRIPTION",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/top-submissions/REPOSITORY_NAME.git"
+    "url": "git+https://github.com/top-submissions/fullstackjs-testing-practice.git"
   },
   "keywords": [],
   "author": "matimotthetimoters",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/top-submissions/REPOSITORY_NAME/issues"
+    "url": "https://github.com/top-submissions/fullstackjs-testing-practice/issues"
   },
-  "homepage": "https://github.com/top-submissions/REPOSITORY_NAME#readme",
+  "homepage": "https://github.com/top-submissions/fullstackjs-testing-practice#readme",
   "devDependencies": {
     "jest": "^30.2.0"
   }
