@@ -2,8 +2,11 @@ import { capitalize } from '../utils.js';
 
 describe('utils module', () => {
   describe('capitalize function', () => {
-    test('first letter of "odin" is capitalized (Odin)', () => {
+    test('capitalizes first letter of "odin" => "Odin"', () => {
       expect(capitalize('odin')).toBe('Odin');
+    });
+    test('capitalizes mixed case word "oDiN" => "Odin"', () => {
+      expect(capitalize('oDiN')).toBe('Odin');
     });
   });
 });
