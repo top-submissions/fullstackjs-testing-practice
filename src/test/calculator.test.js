@@ -7,5 +7,11 @@ describe('calculator module', () => {
         expect(calculator.add(1, 2, 3)).toBe(6);
       });
     });
+
+    describe('subtract function', () => {
+      test('subtracts numbers 10 - 3 - 2 => 5', () => {
+        expect(calculator.subtract(10, 3, 2)).toBe(5);
+      });
+    });
   });
 });
