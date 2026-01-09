@@ -8,6 +8,9 @@ let calculator = {
   divide: function (...numbers) {
     return numbers.reduce((quotient, number) => quotient / number);
   },
+  multiply: function (...numbers) {
+    return numbers.reduce((product, number) => product * number, 1);
+  },
 };
 
 export { calculator };

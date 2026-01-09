@@ -19,5 +19,11 @@ describe('calculator module', () => {
         expect(calculator.divide(100, 5, 2)).toBe(10);
       });
     });
+
+    describe('multiply function', () => {
+      test('multiplies numbers 2 * 3 * 4 => 24', () => {
+        expect(calculator.multiply(2, 3, 4)).toBe(24);
+      });
+    });
   });
 });
