@@ -9,4 +9,10 @@ describe('utils module', () => {
       expect(capitalize('oDiN')).toBe('Odin');
     });
   });
+
+  describe('reverseString function', () => {
+    test('reverses string "odin" => "nido"', () => {
+      expect(reverseString('odin')).toBe('nido');
+    });
+  });
 });
