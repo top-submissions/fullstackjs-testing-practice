@@ -1,13 +1,5 @@
 function capitalize(str = 'odin') {
-  let capitalizedStr = [...str].reduce((sumStr, letter, index) => {
-    if (index === 0) {
-      return (sumStr += letter.toUpperCase());
-    }
-
-    return (sumStr += letter.toLowerCase());
-  }, '');
-
-  return capitalizedStr;
+  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
 
 export { capitalize };
