@@ -13,5 +13,11 @@ describe('calculator module', () => {
         expect(calculator.subtract(10, 3, 2)).toBe(5);
       });
     });
+
+    describe('divide function', () => {
+      test('divides numbers 100 / 5 / 2 => 10', () => {
+        expect(calculator.divide(100, 5, 2)).toBe(10);
+      });
+    });
   });
 });
