@@ -1,4 +1,5 @@
 import { capitalize, reverseString } from '../utils.js';
+import { calculator } from '../calculator.js';
 
 describe('utils module', () => {
   describe('capitalize function', () => {
