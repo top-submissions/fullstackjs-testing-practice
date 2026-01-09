@@ -1,6 +1,6 @@
 let calculator = {
-  add: function (num1, num2) {
-    return num1 + num2;
+  add: function (...numbers) {
+    return numbers.reduce((sum, number) => sum + number, 0);
   },
 };
 
