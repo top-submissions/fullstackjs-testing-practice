@@ -36,5 +36,9 @@ describe('utils module', () => {
     test('leaves non-alphabetic characters unchanged: "Hello, World!" with shift 3 => "Khoor, Zruog!"', () => {
       expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
     });
+
+    test('handles negative shifts: "bcd" with shift -1 => "abc"', () => {
+      expect(caesarCipher('bcd', -1)).toBe('abc');
+    });
   });
 });
