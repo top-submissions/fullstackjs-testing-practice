@@ -24,5 +24,9 @@ describe('utils module', () => {
     test('wraps from z to a: "xyz" with shift 3 => "abc"', () => {
       expect(caesarCipher('xyz', 3)).toBe('abc');
     });
+
+    test('preserves uppercase: "ABC" with shift 1 => "BCD"', () => {
+      expect(caesarCipher('ABC', 1)).toBe('BCD');
+    });
   });
 });
