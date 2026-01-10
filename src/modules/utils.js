@@ -14,8 +14,18 @@ function shiftChar(char, shift) {
   // Get character code
   const charCode = char.charCodeAt(0);
 
-  const shiftedCode = charCode + shift;
+  // Check if it's lowercase
+  if (char >= 'a' && char <= 'z') {
+    // For lowercase: 'a' = 97, 'z' = 122
+    const baseCode = 97; // ASCII for 'a'
+    const position = charCode - baseCode; // 0-25 where 0='a'
+    const newPosition = (position + shift) % 26; // Wrap around 26 letters
+    const newCharCode = baseCode + newPosition;
+    return String.fromCharCode(newCharCode);
+  }
 
+  // For now, just shift uppercase letters without wrapping
+  const shiftedCode = charCode + shift;
   return String.fromCharCode(shiftedCode);
 }
 

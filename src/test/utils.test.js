@@ -20,5 +20,9 @@ describe('utils module', () => {
     test('shifts lowercase letters by 1: "abc" => "bcd"', () => {
       expect(caesarCipher('abc', 1)).toBe('bcd');
     });
+
+    test('wraps from z to a: "xyz" with shift 3 => "abc"', () => {
+      expect(caesarCipher('xyz', 3)).toBe('abc');
+    });
   });
 });
