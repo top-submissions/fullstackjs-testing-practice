@@ -1,4 +1,4 @@
-import { capitalize, reverseString } from '../utils.js';
+import { capitalize, reverseString } from '../modules/utils.js';
 
 describe('utils module', () => {
   describe('capitalize function', () => {

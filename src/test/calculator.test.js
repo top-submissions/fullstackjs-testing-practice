@@ -1,4 +1,4 @@
-import { calculator } from '../calculator.js';
+import { calculator } from '../modules/calculator';
 
 describe('calculator module', () => {
   describe('calculator object', () => {
