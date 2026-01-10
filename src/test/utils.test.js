@@ -44,5 +44,9 @@ describe('utils module', () => {
     test('handles large shifts (greater than 26): "abc" with shift 27 => "bcd"', () => {
       expect(caesarCipher('abc', 27)).toBe('bcd');
     });
+
+    test('preserves spaces and punctuation: "Hello World!" with shift 5 => "Mjqqt Btwqi!"', () => {
+      expect(caesarCipher('Hello World!', 5)).toBe('Mjqqt Btwqi!');
+    });
   });
 });
