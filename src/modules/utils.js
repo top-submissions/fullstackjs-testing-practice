@@ -7,38 +7,38 @@ function reverseString(str = 'odin') {
 }
 
 function isLetter(char) {
-  return (char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z');
+  const code = char.charCodeAt(0);
+  return (code >= 65 && code <= 90) || (code >= 97 && code <= 122);
 }
 
-function shiftChar(char, shift) {
-  // Get character code
+function isUpperCase(char) {
+  const code = char.charCodeAt(0);
+  return code >= 65 && code <= 90;
+}
+
+function getBaseCode(char) {
+  return isUpperCase(char) ? 65 : 97; // 'A' or 'a'
+}
+
+function shiftLetter(char, shift) {
   const charCode = char.charCodeAt(0);
-
-  // Check if it's lowercase
-  if (char >= 'a' && char <= 'z') {
-    // For lowercase: 'a' = 97, 'z' = 122
-    const baseCode = 97; // ASCII for 'a'
-    const position = charCode - baseCode; // 0-25 where 0='a'
-    const newPosition = (position + shift) % 26; // Wrap around 26 letters
-    const newCharCode = baseCode + newPosition;
-    return String.fromCharCode(newCharCode);
-  }
-
-  // For now, just shift uppercase letters without wrapping
-  const shiftedCode = charCode + shift;
-  return String.fromCharCode(shiftedCode);
+  const baseCode = getBaseCode(char);
+  const position = charCode - baseCode;
+  const newPosition = (position + shift) % 26;
+  const newCharCode = baseCode + newPosition;
+  return String.fromCharCode(newCharCode);
 }
 
 function caesarCipher(str, shift) {
-  // Process the string
   let result = '';
+
   for (let i = 0; i < str.length; i++) {
     const char = str[i];
 
     if (!isLetter(char)) {
       result += char;
     } else {
-      result += shiftChar(char, shift);
+      result += shiftLetter(char, shift);
     }
   }
 
