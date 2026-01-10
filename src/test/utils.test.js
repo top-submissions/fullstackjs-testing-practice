@@ -28,5 +28,9 @@ describe('utils module', () => {
     test('preserves uppercase: "ABC" with shift 1 => "BCD"', () => {
       expect(caesarCipher('ABC', 1)).toBe('BCD');
     });
+
+    test('preserves mixed case: "HeLLo" with shift 3 => "KhOOr"', () => {
+      expect(caesarCipher('HeLLo', 3)).toBe('KhOOr');
+    });
   });
 });
