@@ -32,5 +32,9 @@ describe('utils module', () => {
     test('preserves mixed case: "HeLLo" with shift 3 => "KhOOr"', () => {
       expect(caesarCipher('HeLLo', 3)).toBe('KhOOr');
     });
+
+    test('leaves non-alphabetic characters unchanged: "Hello, World!" with shift 3 => "Khoor, Zruog!"', () => {
+      expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
+    });
   });
 });
