@@ -45,4 +45,23 @@ function caesarCipher(str, shift) {
   return result;
 }
 
-export { capitalize, reverseString, caesarCipher };
+function analyzeArray(arr) {
+  if (!Array.isArray(arr) || arr.length === 0) {
+    return null;
+  }
+
+  const sum = arr.reduce((total, num) => total + num, 0);
+  const average = sum / arr.length;
+  const min = Math.min(...arr);
+  const max = Math.max(...arr);
+  const length = arr.length;
+
+  return {
+    average,
+    min,
+    max,
+    length,
+  };
+}
+
+export { capitalize, reverseString, caesarCipher, analyzeArray };
