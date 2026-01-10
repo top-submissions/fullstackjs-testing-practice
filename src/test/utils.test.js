@@ -40,5 +40,9 @@ describe('utils module', () => {
     test('handles negative shifts: "bcd" with shift -1 => "abc"', () => {
       expect(caesarCipher('bcd', -1)).toBe('abc');
     });
+
+    test('handles large shifts (greater than 26): "abc" with shift 27 => "bcd"', () => {
+      expect(caesarCipher('abc', 27)).toBe('bcd');
+    });
   });
 });
